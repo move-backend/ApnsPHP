@@ -9,6 +9,8 @@
 
 namespace ApnsPHP\Tests;
 
+use ApnsPHP\Message\Priority;
+
 /**
  * This class contains tests for the setter functions
  *
@@ -54,9 +56,9 @@ class MessageSetTest extends MessageTest
     public function validPriorityProvider(): array
     {
         $data   = [];
-        $data[] = [ 1 ];
-        $data[] = [ 5 ];
-        $data[] = [ 10 ];
+        $data[] = [ Priority::PrioritizePowerUsage ];
+        $data[] = [ Priority::ConsiderPowerUsage ];
+        $data[] = [ Priority::Immediately ];
 
         return $data;
     }
@@ -387,29 +389,16 @@ class MessageSetTest extends MessageTest
     /**
      * Test that setPriority() sets a message priority.
      *
-     * @param int $priority Priority value
+     * @param Priority $priority Priority value
      *
      * @dataProvider validPriorityProvider
      * @covers       \ApnsPHP\Message::setPriority
      */
-    public function testSetValidPriority(int $priority): void
+    public function testSetValidPriority(Priority $priority): void
     {
         $this->class->setPriority($priority);
 
         $this->assertPropertySame('priority', $priority);
-    }
-
-    /**
-     * Test that setPriority() throws an exception when trying to set an invalid priority.
-     *
-     * @covers \ApnsPHP\Message::setPriority
-     */
-    public function testSetInvalidPriority(): void
-    {
-        $this->expectException('ApnsPHP\Message\Exception');
-        $this->expectExceptionMessage('Invalid priority');
-
-        $this->class->setPriority(2);
     }
 
     /**

@@ -9,6 +9,8 @@
 
 namespace ApnsPHP\Tests;
 
+use ApnsPHP\Message\Priority;
+
 /**
  * This class contains tests for the getter functions
  *
@@ -191,11 +193,11 @@ class MessageGetTest extends MessageTest
      */
     public function testGetPriority(): void
     {
-        $this->set_reflection_property_value('priority', 5);
+        $this->set_reflection_property_value('priority', Priority::ConsiderPowerUsage);
 
         $value = $this->class->getPriority();
 
-        $this->assertSame(5, $value);
+        $this->assertSame(Priority::ConsiderPowerUsage, $value);
     }
 
     /**

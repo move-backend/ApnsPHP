@@ -10,6 +10,8 @@
 
 namespace ApnsPHP\Tests;
 
+use ApnsPHP\Message\Priority;
+
 /**
  * This class contains tests for the httpSend function
  *
@@ -33,7 +35,7 @@ class PushHttpSendTest extends PushTest
 
         $this->message->expects($this->exactly(2))
                       ->method('getPriority')
-                      ->will($this->returnValue(5));
+                      ->willReturn(Priority::ConsiderPowerUsage);
 
         $this->message->expects($this->exactly(2))
                       ->method('getCollapseId')

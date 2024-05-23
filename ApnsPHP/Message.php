@@ -10,6 +10,7 @@
 namespace ApnsPHP;
 
 use ApnsPHP\Message\Exception;
+use ApnsPHP\Message\Priority;
 
 /**
  * The Push Notification Message.
@@ -32,12 +33,6 @@ class Message
      * @var string
      */
     protected const APPLE_RESERVED_NAMESPACE = 'aps';
-
-    /**
-     * Supported notification priorities.
-     * @var int[]
-     */
-    protected const APNS_PRIORITIES = [ 1, 5, 10 ];
 
     /**
      * Supported push types.
@@ -148,9 +143,9 @@ class Message
 
     /**
      * The priority of the remote notification.
-     * @var 1|5|10|null
+     * @var Priority|null
      */
-    protected ?int $priority = null;
+    protected ?Priority $priority = null;
 
     /**
      * Push type
@@ -705,23 +700,19 @@ class Message
     /**
      * Set the priority of the remote notification, which is 5 (low) or 10 (high).
      *
-     * @param 1|5|10 $priority The priority of the remote notification.
+     * @param Priority $priority The priority of the remote notification.
      */
-    public function setPriority(int $priority): void
+    public function setPriority(Priority $priority): void
     {
-        if (!in_array($priority, self::APNS_PRIORITIES)) {
-            throw new Exception('Invalid priority');
-        }
-
         $this->priority = $priority;
     }
 
     /**
      * Get the priority of the remote notification.
      *
-     * @return 1|5|10|null The priority of the remote notification.
+     * @return Priority|null The priority of the remote notification.
      */
-    public function getPriority(): ?int
+    public function getPriority(): ?Priority
     {
         return $this->priority;
     }

@@ -615,7 +615,7 @@ class Push
             $headers[] = sprintf('apns-expiration: %s', $message->getExpiry());
         }
         if (!empty($message->getPriority())) {
-            $headers[] = sprintf('apns-priority: %s', $message->getPriority());
+            $headers[] = sprintf('apns-priority: %s', $message->getPriority()->value);
         }
         if (!empty($message->getCollapseId())) {
             $headers[] = sprintf('apns-collapse-id: %s', $message->getCollapseId());
