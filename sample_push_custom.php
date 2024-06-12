@@ -28,7 +28,7 @@ class SampleLogger extends \Psr\Log\AbstractLogger
     }
 }
 
-// Instanciate a new ApnsPHP_Push object
+// Instantiate a new ApnsPHP_Push object
 $push = new \ApnsPHP\Push(
     \ApnsPHP\Push::ENVIRONMENT_SANDBOX,
     'server_certificates_bundle_sandbox.pem',

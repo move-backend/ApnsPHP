@@ -364,7 +364,7 @@ class MessageSetTest extends MessageTest
      * @dataProvider validCustomIdentifierProvider
      * @covers       \ApnsPHP\Message::setCustomIdentifier
      */
-    public function testSetValidCustomIndentifier(string $id): void
+    public function testSetValidCustomIdentifier(string $id): void
     {
         $this->class->setCustomIdentifier($id);
 
@@ -376,7 +376,7 @@ class MessageSetTest extends MessageTest
      *
      * @covers \ApnsPHP\Message::setCustomIdentifier
      */
-    public function testSetInvalidCustomIndentifier(): void
+    public function testSetInvalidCustomIdentifier(): void
     {
         $this->expectException('ApnsPHP\Message\Exception');
         $this->expectExceptionMessage('Identifier must be a UUID');

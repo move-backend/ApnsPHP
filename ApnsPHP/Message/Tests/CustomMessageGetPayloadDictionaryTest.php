@@ -32,7 +32,7 @@ class CustomMessageGetPayloadDictionaryTest extends CustomMessageTest
         $this->class->setMutableContent(true);
         $this->class->setCategory('something');
         $this->class->setThreadId('thisIsAThreadId');
-        $this->class->setCustomProperty('propertie', 'propertie');
+        $this->class->setCustomProperty('property', 'property');
         $this->class->setCustomProperty('name', 'value');
         $this->class->setActionLocKey('Button title');
         $this->class->setLocArgs([ 'value', 'value' ]);
@@ -56,7 +56,7 @@ class CustomMessageGetPayloadDictionaryTest extends CustomMessageTest
                 'category'          => 'something',
                 'thread-id'         => 'thisIsAThreadId'
             ],
-            'propertie' => 'propertie',
+            'property' => 'property',
             'name' => 'value'
         ];
 
@@ -80,7 +80,7 @@ class CustomMessageGetPayloadDictionaryTest extends CustomMessageTest
         $this->class->setMutableContent(true);
         $this->class->setCategory('something');
         $this->class->setThreadId('thisIsAThreadId');
-        $this->class->setCustomProperty('propertie', 'propertie');
+        $this->class->setCustomProperty('property', 'property');
         $this->class->setCustomProperty('name', 'value');
         $this->class->setActionLocKey('Button title');
         $this->class->setLocKey('localization string');
@@ -105,7 +105,7 @@ class CustomMessageGetPayloadDictionaryTest extends CustomMessageTest
                 'category'          => 'something',
                 'thread-id'         => 'thisIsAThreadId'
             ],
-            'propertie' => 'propertie',
+            'property' => 'property',
             'name' => 'value'
         ];
 

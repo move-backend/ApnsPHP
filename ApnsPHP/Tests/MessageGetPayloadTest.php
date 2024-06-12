@@ -32,12 +32,12 @@ class MessageGetPayloadTest extends MessageTest
         $this->class->setMutableContent(true);
         $this->class->setCategory('something');
         $this->class->setThreadId('thisIsAThreadId');
-        $this->class->setCustomProperty('propertie', 'propertie');
+        $this->class->setCustomProperty('property', 'property');
         $this->class->setCustomProperty('name', 'value');
 
         $payload = '{"aps":{"alert":{"title":"Were no strangers to love","body":"You know the rules, and so do I"},' .
                    '"badge":1,"sound":"default","content-available":1,"mutable-content":1,"category":"something",' .
-                   '"thread-id":"thisIsAThreadId"},"propertie":"propertie","name":"value"}';
+                   '"thread-id":"thisIsAThreadId"},"property":"property","name":"value"}';
 
         $result = $this->class->getPayload();
 
@@ -126,12 +126,12 @@ class MessageGetPayloadTest extends MessageTest
         $this->class->setMutableContent(true);
         $this->class->setCategory('something');
         $this->class->setThreadId('thisIsAThreadId');
-        $this->class->setCustomProperty('propertie', 'propertie');
+        $this->class->setCustomProperty('property', 'property');
         $this->class->setCustomProperty('name', 'value');
 
         $payload = '{"aps":{"alert":{"title":"Were no strangers to love","body":"You know the rules, and so do I"},' .
                    '"badge":1,"sound":"default","content-available":1,"mutable-content":1,"category":"something",' .
-                   '"thread-id":"thisIsAThreadId"},"propertie":"propertie","name":"value"}';
+                   '"thread-id":"thisIsAThreadId"},"property":"property","name":"value"}';
 
         $result = (string) $this->class;
 

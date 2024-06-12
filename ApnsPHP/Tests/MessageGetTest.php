@@ -291,7 +291,7 @@ class MessageGetTest extends MessageTest
     }
 
     /**
-     * Test that getCustomPropertyValue() successfuly returns an existing property.
+     * Test that getCustomPropertyValue() successfully returns an existing property.
      *
      * @covers \ApnsPHP\Message::getCustomProperty
      */
@@ -330,7 +330,7 @@ class MessageGetTest extends MessageTest
     }
 
     /**
-     * Test that getCustomPropertyNames() successfuly returns the names of the set properties.
+     * Test that getCustomPropertyNames() successfully returns the names of the set properties.
      *
      * @covers \ApnsPHP\Message::getCustomPropertyNames
      */

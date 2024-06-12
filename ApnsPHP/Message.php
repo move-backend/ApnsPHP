@@ -217,7 +217,7 @@ class Message
             );
         }
 
-        //TODO: Replace this with actuall looping over recipients
+        //TODO: Replace this with actually looping over recipients
         $copy = clone $this;
         $copy->deviceTokens = [$this->deviceTokens[$recipient]];
 

@@ -661,7 +661,7 @@ class Push
      *
      * When a message is successful sent or reached the maximum retry time is removed
      * from the message queue and inserted in the Errors container. Use the getErrors()
-     * method to retrive messages with delivery error(s).
+     * method to retrieve messages with delivery error(s).
      *
      * @param bool $empty Empty the message queue (optional).
      *
